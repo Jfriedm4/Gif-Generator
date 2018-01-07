@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gif Generator</title>
+    <!--Linking Reset-->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--Linking Bootstrap-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <!--Linking Googlefonts-->
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Montserrat" rel="stylesheet">
+    <!--Linking favicon-->
+    <!-- <link rel="shortcut icon" href="assets/images/engram.ico" type="image/x-icon"> -->
+    <!--Linking CSS-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--Linking JQuery-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!--Linking Javascript-->
+    <script type="text/javascript" src="assets/js/script.js"></script>
+
+  </head>
+
+  <body>
+
+      <div class="jumbotron jumbotron-fluid head">
+          <div class="container">
+                  <div class="row">
+                    <div class="col-sm-4">
+                        <h1 class="display-4">Simply Gifs</h1>
+                        <form>
+                            <div class="form-group">
+                              <input type="text" class="form-control" id="inputText" placeholder="Search for a Gifs">
+                              <button type="submit" class="btn btn-primary">Add your Gif Category to the List</button>
+                            </div>
+                          </form>
+                    </div>
+                    <div class="col-sm-8">
+                        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                            <a class="navbar-brand" href="#">Gif Categories</a>
+                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                              <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarNav">
+                              <ul class="navbar-nav gifsList">
+                              </ul>
+                            </div>
+                          </nav>
+                    </div>
+                  </div>
+          </div>
+        </div>
+
+        <div class="jumbotron jumbotron-fluid content">
+            <div class="container">
+              <h1 class="display-4 gifTitle">Find Your Gifs Here</h1>
+              <div class="gifResult"></div>
+            </div>
+          </div>
+
+
+      <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
+  </body>
+</html>
