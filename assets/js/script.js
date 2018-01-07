@@ -1,6 +1,6 @@
 $(function() {
 
-    var gifCategories = ["scooby-doo", "rick grimes", "ramen noodles"];
+    var gifCategories = ["Rick Grimes", "Puppies", "Tina Burger", "Rick and Morty"];
 
     var urlBase = "https://api.giphy.com/v1/gifs/search?q=";
     var apiKey = "&api_key=mGWJQ1NN14NC9rTAuGNfiAOJWzTpTM5L";
@@ -37,18 +37,34 @@ $(function() {
         })
         .done(function(response) {
             var results = response.data;
+            console.log(response.data);
+            
 
             for (var i = 0; i < results.length; i++) {
-                var gifDiv = $(".gifResult");
+                var gifDiv = $('<div class="gif"></div>');
                 var rating = results[i].rating;
                 var p = $("<p>").text("Rating: " + rating);
-                var gifImage = $("<img>");
-                gifImage.attr("src", results[i].images.fixed_height.url);
-                gifDiv.append(p);
+                var gifImage = $('<img class="gifImg still">');
+                gifImage.attr("src", results[i].images.fixed_height_still.url);
                 gifDiv.append(gifImage);
-                $("#gifs-appear-here").prepend(gifDiv);
+                gifDiv.append(p);
+                $(".gifResult").append(gifDiv);
             } 
         });
-    })
+    });
+
+    $(document).on("click", ".gifImg", function(){
+        var src = $(this).attr("src");
+        if($(this).hasClass('still')){
+           //stop
+           $(this).attr('src', src.replace(/\_s.gif/i, ".gif"))
+           $(this).removeClass('still');
+        } else {
+          //play
+          $(this).addClass('still');
+          $(this).attr('src', src.replace(/\.gif/i, "_s.gif"))
+        }
+        
+    });
 
 });
