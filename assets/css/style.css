@@ -25,3 +25,11 @@
     margin-top: 60px;
   }
 }
+
+.gifTitle {
+    text-align: center;
+}
+
+.content {
+    overflow: scroll;
+}

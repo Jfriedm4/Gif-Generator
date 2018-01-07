@@ -23,9 +23,9 @@ $(function() {
 
     // function get the Gifs
     $(document).on("click", ".gifBtn", function(){  
-        var chosenGif = $(this).id;
-        console.log($(this).id);
+        var chosenGif = $(this).attr("id");
         
+        $(".gifResult").empty();
         
         var queryURL = urlBase + chosenGif + apiKey + gifNumber;
 
