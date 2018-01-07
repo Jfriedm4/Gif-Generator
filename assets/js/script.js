@@ -1,6 +1,6 @@
 $(function() {
 
-    var gifCategories = ["Rick Grimes", "Puppies", "Tina Burger", "Rick and Morty"];
+    var gifCategories = ["Rick Grimes", "Death Note", "Tina Burger", "Rick and Morty"];
 
     var urlBase = "https://api.giphy.com/v1/gifs/search?q=";
     var apiKey = "&api_key=mGWJQ1NN14NC9rTAuGNfiAOJWzTpTM5L";
